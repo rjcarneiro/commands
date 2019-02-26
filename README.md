@@ -1,7 +1,7 @@
 # Commands
 
 - [Git](#git)
-- [Dotnet Core](#dotnet)
+- [Dotnet Core](#dotnet-core)
 - [Nuget](#nuget)
 
 ## Git
