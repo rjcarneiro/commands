@@ -25,7 +25,7 @@ dotnet test src\project\project.csproj -c Release
 
 ```bash
 # publish a project into a certain dist folder with certain version, in release mode
-dotnet publish src\project -c Release -o ..\..\dist\ /p:Version=0.0.1
+dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1
 ```
 
 ## Nuget
