@@ -32,5 +32,5 @@ dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1
 
 ```bash
 # packs a nuget from a nuspec with a certain version in release mode
-- nuget pack dist\project.nuspec -Version 0.0.1-alpha-SHA1 -Properties Configuration=Release -OutputDirectory .\dist\
+nuget pack dist\project.nuspec -Version 0.0.1-alpha-SHA1 -Properties Configuration=Release -OutputDirectory .\dist\
 ```
