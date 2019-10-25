@@ -29,6 +29,12 @@ dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1
 ```
 
 ```bash
+# publish an exe with a single file
+dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
+```
+
+
+```bash
 # publish a nuget package using dotnet nuget
 dotnet nuget push -s http://your.nuget.com/v3/index.json package.version.nupkg -k key
 ```
