@@ -3,6 +3,7 @@
 - [Git](#git)
 - [Dotnet Core](#dotnet-core)
 - [Nuget](#nuget)
+- [Visual Studio](#visual-studio)
 
 ## Git
 
@@ -55,4 +56,16 @@ nuget pack dist\project.nuspec -Version 0.0.1-alpha-SHA1 -Properties Configurati
 ```bash
 # publish a nuget package using nuget
 nuget push package.nupkg -Source http://nuget.rezult.io/v3/index.json
+```
+
+## Visual Studio
+
+```bash
+# path for template class files
+
+# for professional edition
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\ItemTemplates\CSharp\Code\1033\Class\Class.cs
+
+## for community edition
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ItemTemplates\CSharp\Code\1033\Class\Class.cs
 ```
