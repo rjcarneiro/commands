@@ -1,8 +1,8 @@
 # Commands
 
 - [Git](#git)
-- [Dotnet Core](#dotnet-core)
-- [Nuget](#nuget)
+- [.NET Core](#net-core)
+- [NuGet](#nuget)
 - [Visual Studio](#visual-studio)
 
 ## Git
@@ -17,7 +17,7 @@ git branch --contains <commit>
 git reset --soft HEAD^
 ```
 
-## Dotnet Core
+## .NET Core
 
 ```bash
 # test a certain project in release mode
@@ -34,7 +34,6 @@ dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1
 dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
 ```
 
-
 ```bash
 # publish a nuget package using dotnet nuget
 dotnet nuget push -s http://your.nuget.com/v3/index.json package.version.nupkg -k key
@@ -46,7 +45,14 @@ dotnet nuget push -s http://your.nuget.com/v3/index.json package.version.nupkg -
 dotnet build .\src\Company.Product.Project\ -c Release -o ..\..\dist\ /p:Version=$version
 ```
 
-## Nuget
+```bash
+# copy content from csproj
+  <ItemGroup>
+    <Content Include="**\*.json;**\*.js;" Exclude="bin\**\*;obj\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+```
+
+## NuGet
 
 ```bash
 # packs a nuget from a nuspec with a certain version in release mode
@@ -62,10 +68,36 @@ nuget push package.nupkg -Source http://nuget.rezult.io/v3/index.json
 
 ```bash
 # path for template class files
-
 # for professional edition
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\ItemTemplates\CSharp\Code\1033\Class\Class.cs
 
 ## for community edition
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ItemTemplates\CSharp\Code\1033\Class\Class.cs
+```
+
+```csharp
+// Class.cs template
+#region Copyright
+//-------------------------------------------------------------------------------------
+// <copyright file="$safeitemrootname$.cs">
+//     Copyright (c) $year$ $registeredorganization$. All rights reserved.
+//     Originally created by $username$ at $time$ in $machinename$.
+// </copyright>
+//-------------------------------------------------------------------------------------
+#endregion Copyright
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace $rootnamespace$
+{
+    public class $safeitemrootname$
+    {
+        public $safeitemrootname$()
+        {
+        }
+    }
+}
 ```
