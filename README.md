@@ -64,6 +64,11 @@ nuget pack dist\project.nuspec -Version 0.0.1-alpha-SHA1 -Properties Configurati
 nuget push package.nupkg -Source http://nuget.rezult.io/v3/index.json
 ```
 
+```bash
+# delete a specific NuGet package version from a source
+nuget delete Package.Name 1.2.3 -ApiKey ApiKeyGoesHere -Source http://nuget.rezult.io  
+```
+
 ## Visual Studio
 
 ```bash
