@@ -52,6 +52,16 @@ dotnet build .\src\Company.Product.Project\ -c Release -o ..\..\dist\ /p:Version
   </ItemGroup>
 ```
 
+```bash
+# default configuration for Web App
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+    <IncludeSymbolsInSingleFile>true</IncludeSymbolsInSingleFile>
+  </PropertyGroup>
+```
+
 ## NuGet
 
 ```bash
