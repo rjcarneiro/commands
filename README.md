@@ -17,6 +17,11 @@ git branch --contains <commit>
 git reset --soft HEAD^
 ```
 
+```bash
+# cherry-pick command will allows you to pick any commit from any branch and apply it to any other branch.
+git cherry-pick <commit-hash>
+```
+
 ## .NET Core
 
 ```bash
