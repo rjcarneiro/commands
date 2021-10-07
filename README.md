@@ -25,6 +25,12 @@ git cherry-pick <commit-hash>
 ## .NET Core
 
 ```bash
+# build a projcet with a specific version in release mode
+dotnet build src\project\project.csproj -c Release /p:Version=0.0.1
+```
+
+
+```bash
 # test a certain project in release mode
 dotnet test src\project\project.csproj -c Release
 ```
