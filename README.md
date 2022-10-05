@@ -29,7 +29,6 @@ git cherry-pick <commit-hash>
 dotnet build src\project\project.csproj -c Release /p:Version=0.0.1
 ```
 
-
 ```bash
 # test a certain project in release mode
 dotnet test src\project\project.csproj -c Release
@@ -37,12 +36,17 @@ dotnet test src\project\project.csproj -c Release
 
 ```bash
 # publish a project into a certain dist folder with certain version, in release mode
-dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1
+dotnet publish src\project.csproj -c Release -o .\dist\ /p:Version=0.0.1
+```
+
+```bash
+# publish a project using as self contained
+dotnet publish ./src/My.csproj /p:Configuration=Release -r win-x64 --self-contained true -o ./dist/ /p:Version=0.0.1
 ```
 
 ```bash
 # publish an exe with a single file
-dotnet publish src\project -c Release -o ..\dist\ /p:Version=0.0.1 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
+dotnet publish src\project.csproj -c Release -o .\dist\ /p:Version=0.0.1 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
 ```
 
 ```bash
@@ -53,7 +57,7 @@ dotnet nuget push -s http://your.nuget.com/v3/index.json package.version.nupkg -
 ```bash
 # build a project assembly into a specific folder with a certain version
 # useful if you set the project properties to generate a nuget package
-dotnet build .\src\Company.Product.Project\ -c Release -o ..\..\dist\ /p:Version=$version
+dotnet build .\src\Company.Product.Project\ -c Release -o .\dist\ /p:Version=$version
 ```
 
 ```bash
