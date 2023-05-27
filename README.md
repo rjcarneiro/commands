@@ -4,6 +4,7 @@
 - [.NET Core](#net-core)
 - [NuGet](#nuget)
 - [Visual Studio](#visual-studio)
+- [Windows Terminal](#windows-terminal)
 
 ## Git
 
@@ -107,27 +108,39 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ItemTe
 
 ```csharp
 // Class.cs template
-#region Copyright
-//-------------------------------------------------------------------------------------
-// <copyright file="$safeitemrootname$.cs">
-//     Copyright (c) $year$ $registeredorganization$. All rights reserved.
-//     Originally created by $username$ at $time$ in $machinename$.
-// </copyright>
-//-------------------------------------------------------------------------------------
-#endregion Copyright
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace $rootnamespace$
+namespace $rootnamespace$;
+
+public class $safeitemrootname$
 {
-    public class $safeitemrootname$
+    public $safeitemrootname$()
     {
-        public $safeitemrootname$()
-        {
-        }
     }
 }
+```
+
+## Windows Terminal
+
+```bash
+# command to set up powershell profile using Visual Studio Code
+code $PROFILE
+```
+
+```bash
+# my default profile using oh-my-posh
+Import-Module -Name Terminal-Icons
+Import-Module posh-git
+
+$MyFavoriteThemes = @("ys", "tokyo", "tiwahu", "wholespace", "quick-term", "amro", "atomic", "cert", "chips", "clean-detailed")
+$MyFavoriteTheme = $MyFavoriteThemes | Get-Random
+
+oh-my-posh --init --shell pwsh --config $env:POSH_THEMES_PATH/$MyFavoriteTheme.omp.json | Invoke-Expression
+#& ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\$MyFavoriteTheme.omp.json" --print) -join "`n"))
+
+Enable-PoshTooltips
+Set-Location D:\Projects
 ```
