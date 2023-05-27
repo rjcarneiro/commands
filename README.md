@@ -4,6 +4,7 @@
 - [.NET Core](#net-core)
 - [NuGet](#nuget)
 - [Visual Studio](#visual-studio)
+- [Windows Terminal](#windows-terminal)
 
 ## Git
 
@@ -130,4 +131,26 @@ namespace $rootnamespace$
         }
     }
 }
+```
+
+## Windows Terminal
+
+```bash
+# command to set up powershell profile using Visual Studio Code
+code $PROFILE
+```
+
+```bash
+# my default profile using oh-my-posh
+Import-Module -Name Terminal-Icons
+Import-Module posh-git
+
+$MyFavoriteThemes = @("ys", "tokyo", "tiwahu", "wholespace", "quick-term", "amro", "atomic", "cert", "chips", "clean-detailed")
+$MyFavoriteTheme = $MyFavoriteThemes | Get-Random
+
+oh-my-posh --init --shell pwsh --config $env:POSH_THEMES_PATH/$MyFavoriteTheme.omp.json | Invoke-Expression
+#& ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\$MyFavoriteTheme.omp.json" --print) -join "`n"))
+
+Enable-PoshTooltips
+Set-Location D:\Projects
 ```
