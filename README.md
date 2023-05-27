@@ -108,27 +108,17 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ItemTe
 
 ```csharp
 // Class.cs template
-#region Copyright
-//-------------------------------------------------------------------------------------
-// <copyright file="$safeitemrootname$.cs">
-//     Copyright (c) $year$ $registeredorganization$. All rights reserved.
-//     Originally created by $username$ at $time$ in $machinename$.
-// </copyright>
-//-------------------------------------------------------------------------------------
-#endregion Copyright
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace $rootnamespace$
+namespace $rootnamespace$;
+
+public class $safeitemrootname$
 {
-    public class $safeitemrootname$
+    public $safeitemrootname$()
     {
-        public $safeitemrootname$()
-        {
-        }
     }
 }
 ```
