@@ -78,6 +78,13 @@ dotnet build .\src\Company.Product.Project\ -c Release -o .\dist\ /p:Version=$ve
   </PropertyGroup>
 ```
 
+```bash
+# include AspNetCore framework into class projects
+<ItemGroup>
+  <FrameworkReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
 ## NuGet
 
 ```bash
