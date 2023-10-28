@@ -4,6 +4,7 @@
 - [.NET Core](#net-core)
 - [NuGet](#nuget)
 - [Visual Studio](#visual-studio)
+- [Serilog](#serilog)
 - [Windows Terminal](#windows-terminal)
 
 ## Git
@@ -128,6 +129,16 @@ public class $safeitemrootname$
     {
     }
 }
+```
+
+## Serilog
+
+```bash
+# file logging templates for applications
+[{Timestamp:HH:mm:ss} {Level:u3} {SourceContext}] {Message:lj}{NewLine}{Exception}
+
+# file logging templates for web apps
+[{Timestamp:HH:mm:ss} {Level:u3} {ActionId} {RequestId} {SourceContext} {ActionName}] {Message:lj}{NewLine}{Exception}
 ```
 
 ## Windows Terminal
