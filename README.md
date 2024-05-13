@@ -135,10 +135,10 @@ public class $safeitemrootname$
 
 ```bash
 # file logging templates for applications
-[{Timestamp:HH:mm:ss} {Level:u3} {SourceContext}] {Message:lj}{NewLine}{Exception}
+[{Timestamp:HH:mm:ss}/{Level:u3}/{SourceContext}] {Message:lj}{NewLine}{Exception}
 
 # file logging templates for web apps
-[{Timestamp:HH:mm:ss} {Level:u3} {ActionId} {RequestId} {SourceContext} {ActionName}] {Message:lj}{NewLine}{Exception}
+[{Timestamp:HH:mm:ss}/{Level:u3}/{SourceContext}/{ActionId}/{RequestId}/{ActionName}] {Message:lj}{NewLine}{Exception}
 ```
 
 ## Windows Terminal
