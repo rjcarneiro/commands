@@ -72,7 +72,7 @@ dotnet build .\src\Company.Product.Project\ -c Release -o .\dist\ /p:Version=$ve
 ```bash
 # default configuration for Web App
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <LangVersion>latest</LangVersion>
     <IncludeSymbolsInSingleFile>true</IncludeSymbolsInSingleFile>
