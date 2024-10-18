@@ -153,7 +153,7 @@ code $PROFILE
 Import-Module -Name Terminal-Icons
 Import-Module posh-git
 
-$MyFavoriteThemes = @("wholespace", "unicorn", "thecyberden", "takuya")
+$MyFavoriteThemes = @("wholespace", "atomic", "atomicBit", "blue-owl", "unicorn", "thecyberden", "takuya", "agnoster.minimal", "1_shell")
 $MyFavoriteTheme = $MyFavoriteThemes | Get-Random
 
 oh-my-posh --init --shell pwsh --config $env:POSH_THEMES_PATH/$MyFavoriteTheme.omp.json | Invoke-Expression
