@@ -24,6 +24,11 @@ git reset --soft HEAD^
 git cherry-pick <commit-hash>
 ```
 
+```bash
+# push with force with lease command
+git push --force-with-lease
+```
+
 ## .NET Core
 
 ```bash
